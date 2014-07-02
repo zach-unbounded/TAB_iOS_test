@@ -23,6 +23,8 @@ static TABEmplyeeDataProvider *sharedInstance = nil;
 
 @property (strong, nonatomic) NSOperationQueue * queue;
 
+@property (strong, nonatomic) NSCache * imageCache;
+
 @end
 
 @implementation TABEmplyeeDataProvider
@@ -75,6 +77,32 @@ static TABEmplyeeDataProvider *sharedInstance = nil;
                                    });
                                }
                            }];
+}
+
+- (void)getImageForURL:(NSString*)paramUrl withCompleation:(void(^)(UIImage* image, NSError * error))paramCompleation {
+    if([self.imageCache objectForKey:paramUrl]) {
+        UIImage * image = [self.imageCache objectForKey:paramUrl];
+        paramCompleation(image,nil);
+    }
+    else {
+        NSURL * url = [NSURL URLWithString:paramUrl];
+        NSURLRequest * request = [[NSURLRequest alloc] initWithURL:url];
+        [NSURLConnection sendAsynchronousRequest:request
+                                           queue:self.queue
+                               completionHandler:^(NSURLResponse *responce, NSData * data, NSError *connectionError) {
+                                   if (connectionError) {
+                                       dispatch_async(dispatch_get_main_queue(), ^{
+                                           paramCompleation(nil,connectionError);
+                                       });
+                                   }
+                                   else {
+                                       dispatch_async(dispatch_get_main_queue(), ^{
+                                           [self.imageCache setObject:[UIImage imageWithData:data] forKey:paramUrl];
+                                           paramCompleation([UIImage imageWithData:data],nil);
+                                       });
+                                   }
+                               }];
+    }
 }
 
 @end

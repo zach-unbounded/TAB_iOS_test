@@ -6,38 +6,66 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CELL" rowHeight="270" id="KGk-i7-Jjw" customClass="TABEmployeeTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CELL" rowHeight="296" id="KGk-i7-Jjw" customClass="TABEmployeeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="296"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="295"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6Z-Rh-sxK">
-                        <rect key="frame" x="15" y="105" width="290" height="16"/>
+                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6Z-Rh-sxK">
+                        <rect key="frame" x="15" y="105" width="290" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="290" id="Cie-86-phh"/>
+                            <constraint firstAttribute="height" constant="20" id="mMY-Wg-Z2f"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="14"/>
                         <color key="textColor" red="0.49205801104972374" green="0.49205801104972374" blue="0.49205801104972374" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m78-1k-AEn">
+                    <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m78-1k-AEn">
                         <rect key="frame" x="123" y="15" width="75" height="75"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="BhX-cv-uXT"/>
+                            <constraint firstAttribute="width" constant="75" id="ENO-PV-RBz"/>
+                        </constraints>
                     </imageView>
-                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maw-v2-X5F">
-                        <rect key="frame" x="15" y="121" width="290" height="14"/>
+                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maw-v2-X5F">
+                        <rect key="frame" x="15" y="125" width="290" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="8zg-4W-DoR"/>
+                            <constraint firstAttribute="width" constant="290" id="Arb-b4-W7K"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="12"/>
                         <color key="textColor" red="0.57001035911602205" green="0.57001035911602205" blue="0.57001035911602205" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="27" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="oQg-jp-m97">
-                        <rect key="frame" x="15" y="135" width="290" height="120"/>
+                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="27" baselineAdjustment="alignBaselines" minimumScaleFactor="0.35000000000000003" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="oQg-jp-m97">
+                        <rect key="frame" x="15" y="160" width="290" height="120"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="14"/>
+                        <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="maw-v2-X5F" secondAttribute="trailing" constant="15" id="1g2-vY-aY5"/>
+                    <constraint firstItem="oQg-jp-m97" firstAttribute="trailing" secondItem="maw-v2-X5F" secondAttribute="trailing" id="A5V-MV-PAF"/>
+                    <constraint firstItem="n6Z-Rh-sxK" firstAttribute="top" secondItem="m78-1k-AEn" secondAttribute="bottom" constant="15" id="CjV-Fe-Xtd"/>
+                    <constraint firstItem="m78-1k-AEn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="DRW-K5-bSC"/>
+                    <constraint firstAttribute="trailing" secondItem="m78-1k-AEn" secondAttribute="trailing" constant="122" id="GEi-lk-SsZ"/>
+                    <constraint firstItem="oQg-jp-m97" firstAttribute="leading" secondItem="maw-v2-X5F" secondAttribute="leading" id="SLl-B0-wNJ"/>
+                    <constraint firstItem="n6Z-Rh-sxK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="UmU-zG-6xv"/>
+                    <constraint firstItem="m78-1k-AEn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="123" id="ZK2-Yn-eFo"/>
+                    <constraint firstAttribute="bottom" secondItem="oQg-jp-m97" secondAttribute="bottom" constant="15" id="dbg-6X-vn3"/>
+                    <constraint firstItem="maw-v2-X5F" firstAttribute="top" secondItem="n6Z-Rh-sxK" secondAttribute="bottom" id="f2O-Uj-TA3"/>
+                    <constraint firstItem="maw-v2-X5F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="iSY-0z-0QQ"/>
+                    <constraint firstAttribute="trailing" secondItem="n6Z-Rh-sxK" secondAttribute="trailing" constant="15" id="suT-M6-H2N"/>
+                    <constraint firstItem="oQg-jp-m97" firstAttribute="top" secondItem="maw-v2-X5F" secondAttribute="bottom" constant="15" id="v5m-Wc-5vx"/>
+                    <constraint firstItem="n6Z-Rh-sxK" firstAttribute="top" secondItem="m78-1k-AEn" secondAttribute="bottom" constant="15" id="ycX-DW-gby"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="image_img" destination="m78-1k-AEn" id="gbN-6s-x4s"/>

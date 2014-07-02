@@ -18,4 +18,7 @@
 - (void)getEmplyeesFromPage:(NSString*)paramPageURL
             withCompleation:(void(^)(NSArray* arrayOfEmplyees, NSError * error))paramCompleationBlock;
 
+/** */
+- (void)getImageForURL:(NSString*)paramUrl withCompleation:(void(^)(UIImage* image, NSError * error))paramCompleation;
+
 @end

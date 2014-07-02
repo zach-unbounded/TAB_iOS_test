@@ -8,13 +8,13 @@
         <scene sceneID="LLr-f0-YIH">
             <objects>
                 <tableViewController id="eAl-ak-CBg" customClass="TABEmployeesTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8Nq-8a-ULz">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="8Nq-8a-ULz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CELL" rowHeight="270" id="AYK-aU-QOf" customClass="TABEmployeeTableViewCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="270"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="CELL" rowHeight="270" id="AYK-aU-QOf" customClass="TABEmployeeTableViewCell">
+                                <rect key="frame" x="0.0" y="55" width="320" height="270"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AYK-aU-QOf" id="sij-NQ-s07">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
@@ -27,6 +27,10 @@
                             <outlet property="delegate" destination="eAl-ak-CBg" id="1QL-UR-nvv"/>
                         </connections>
                     </tableView>
+                    <refreshControl key="refreshControl" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="4CS-T8-qto">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrA-y6-Gqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

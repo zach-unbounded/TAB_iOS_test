@@ -22,4 +22,8 @@
 
 + (NSString *)reuseIdentifier;
 
++ (CGFloat)cellHeightWithBioText:(NSString*)paramText;
+
+- (CGFloat)height;
+
 @end
