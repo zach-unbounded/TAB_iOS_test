@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Zachary BURGESS. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "TABEmployeeTableViewCell.h"
 #import "TABEmplyeeDataProvider.h"
 #import "TABEmployee.h"
@@ -32,6 +33,13 @@
     self.miniBio_lbl.text = paramEmployee.miniBio;
     [self layoutSubviews];
     self.image_img.image = [UIImage imageNamed:@"default_original_profile"];
+    
+    self.image_img.layer.borderWidth = 0;
+    self.image_img.layer.borderColor = [UIColor clearColor].CGColor;
+    self.image_img.layer.cornerRadius = self.image_img.frame.size.width / 2;
+    self.image_img.layer.masksToBounds = NO;
+    self.image_img.clipsToBounds = YES;
+    
     [[TABEmplyeeDataProvider sharedInstance] getImageForURL:paramEmployee.image withCompleation:^(UIImage * paramImage, NSError * error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.image_img.image = paramImage;
