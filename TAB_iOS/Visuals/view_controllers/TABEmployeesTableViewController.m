@@ -11,9 +11,24 @@
 #import "TABEmplyeeDataProvider.h"
 #import "TABEmployee.h"
 
+
+static NSString * const TABLogoImageName          = @"logo-orange";
+static NSString * const TABEmployeeURLString      = @"http://www.theappbusiness.com/our-team/";
+
+static CGFloat const TABHeaderImageWidth          = 80.0f;
+static CGFloat const TABScreenWidth               = 320.0f;
+static CGFloat const TABPaddingHight              = 20.0f;
+
+
 @interface TABEmployeesTableViewController ()
 
-@property (copy, nonatomic) NSArray * employees;
+@property (strong, nonatomic) NSArray * employees;
+
+@property (strong, nonatomic) UIActivityIndicatorView *activity;
+
+- (void)refreshList:(UIRefreshControl *)sender;
+
+- (void)showErrorMessageWithError:(NSError*)paramError;
 
 @end
 
@@ -34,21 +49,30 @@
     UINib *nib = [UINib nibWithNibName:@"TABEmployeeTableViewCell" bundle:nil];
     [[self tableView] registerNib:nib forCellReuseIdentifier:[TABEmployeeTableViewCell reuseIdentifier]];
     
+    self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.activity setFrame:CGRectMake(0, 0, 320.0f, [UIScreen mainScreen].bounds.size.height)];
+    [self.activity setTintColor:[UIColor blackColor]];
+    [self.activity setColor:[UIColor blackColor]];
+    [self.view addSubview:self.activity];
+    [self.activity startAnimating];
+    
     // table header
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 120.0f)];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((320.0f/ 2)-(80.0f / 2), 20.0f, 80.0f, 80.0f)];
-    [imageView setImage:[UIImage imageNamed: @"logo-orange"]];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0f,
+                                                                  0.0f,
+                                                                  TABScreenWidth,
+                                                                  (TABHeaderImageWidth + (TABPaddingHight * 2)))];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((TABScreenWidth/ 2) - (TABHeaderImageWidth / 2),
+                                                                           TABPaddingHight,
+                                                                           TABHeaderImageWidth,
+                                                                           TABHeaderImageWidth)];
+    [imageView setImage:[UIImage imageNamed:TABLogoImageName]];
     [headerView addSubview:imageView];
     self.tableView.tableHeaderView = headerView;
     
-    
-    UIImageView *refreshImageView = [[UIImageView alloc] initWithFrame:CGRectMake((320.0f/ 2)-(80.0f / 2), 20.0f, 80.0f, 80.0f)];
-    [refreshImageView setImage:[UIImage imageNamed: @"logo-orange"]];
-    [self.refreshControl insertSubview:refreshImageView atIndex:0];
-    [self.refreshControl addTarget:self action:@selector(changeSorting:) forControlEvents:UIControlEventValueChanged];
+    [self.refreshControl addTarget:self action:@selector(refreshList:) forControlEvents:UIControlEventValueChanged];
     
     __weak typeof(self) weakSelf = self;
-    [[TABEmplyeeDataProvider sharedInstance] getEmplyeesFromPage:@"http://www.theappbusiness.com/our-team/"
+    [[TABEmplyeeDataProvider sharedInstance] getEmplyeesFromPage:TABEmployeeURLString
                                                  withCompleation:^(NSArray * arrayOfEmployees, NSError * error) {
                                                      if (error) {
                                                          [weakSelf showErrorMessageWithError:error];
@@ -56,15 +80,26 @@
                                                      else {
                                                          weakSelf.employees = arrayOfEmployees;
                                                          [weakSelf.tableView reloadData];
+                                                         [weakSelf.activity stopAnimating];
                                                          [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                                      }
                                                  }];
 }
 
-- (void)changeSorting:(id)sender {
-    NSLog(@"changing");
+#pragma mark - private methods
+
+- (void)refreshList:(UIRefreshControl *)sender {
     [self.tableView reloadData];
     [self.refreshControl endRefreshing];
+}
+
+- (void)showErrorMessageWithError:(NSError*)paramError {
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:paramError.localizedDescription
+                                                     message:nil
+                                                    delegate:nil
+                                           cancelButtonTitle:@"OK"
+                                           otherButtonTitles:nil];
+    [alert show];
 }
 
 #pragma mark - Table view data source
@@ -75,7 +110,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     TABEmployee * employee = self.employees[indexPath.row];
-    NSLog(@"%@ row hight: %f being calculated, for row: %d",employee.name,[TABEmployeeTableViewCell cellHeightWithBioText:employee.miniBio],indexPath.row);
     return [TABEmployeeTableViewCell cellHeightWithBioText:employee.miniBio];
 }
 
@@ -83,18 +117,10 @@
     return 0;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TABEmployeeTableViewCell *cell = (TABEmployeeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:[TABEmployeeTableViewCell reuseIdentifier] forIndexPath:indexPath];
-
-    [cell setEmployee:self.employees[indexPath.row]];
-    
+    [cell updateCellWithEmployee:self.employees[indexPath.row]];
     return cell;
-}
-
-- (void)showErrorMessageWithError:(NSError*)paramError {
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:paramError.localizedDescription message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
 }
 
 @end

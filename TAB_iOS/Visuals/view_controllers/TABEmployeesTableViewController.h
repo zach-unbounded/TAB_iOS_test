@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Zachary BURGESS. All rights reserved.
 //
 
+/** Employees Table View Controller */
 @interface TABEmployeesTableViewController : UITableViewController
 
 @end
