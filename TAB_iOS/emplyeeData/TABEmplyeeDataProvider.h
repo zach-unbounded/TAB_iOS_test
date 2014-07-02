@@ -6,11 +6,16 @@
 //  Copyright (c) 2014 Zachary BURGESS. All rights reserved.
 //
 
-/** */
+/** a data provider for employment records*/
 @interface TABEmplyeeDataProvider : NSObject
 
-/** */
-- (void)getEmplyeesFromPage:(NSString*)pageURL
-            withCompleation:(void(^)(NSArray* arrayOfEmplyees, NSError * error))compleationBlock;
+/** singlton instance */
++ (instancetype)sharedInstance;
+
+/** extracts employee records from a compatible web page with given url
+ @param paramPageURL the url of the page
+ @param paramCompleationBlock block to be ran on compleation*/
+- (void)getEmplyeesFromPage:(NSString*)paramPageURL
+            withCompleation:(void(^)(NSArray* arrayOfEmplyees, NSError * error))paramCompleationBlock;
 
 @end

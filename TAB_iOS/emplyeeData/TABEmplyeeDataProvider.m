@@ -7,8 +7,17 @@
 //
 
 #import "TABEmplyeeDataProvider.h"
-#import "TABEmplyee.h"
+#import "TABEmployee.h"
 #import "HTMLDocument.h"
+
+static NSString * const TABEmployeeProviderUserDivClassKey          = @"//div[@class='col col2']";
+static NSString * const TABEmployeeProviderUserNameTagKey           = @"//h3";
+static NSString * const TABEmployeeProviderUserTitleTagKey          = @"//p";
+static NSString * const TABEmployeeProviderUserDescriptionTagKey    = @"//p[@class='user-description']";
+static NSString * const TABEmployeeProviderUserImageTagKey          = @"//img";
+static NSString * const TABEmployeeProviderUserImageAttributeKey    = @"src";
+
+static TABEmplyeeDataProvider *sharedInstance = nil;
 
 @interface TABEmplyeeDataProvider ()
 
@@ -18,10 +27,18 @@
 
 @implementation TABEmplyeeDataProvider
 
++ (instancetype)sharedInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [TABEmplyeeDataProvider new];
+    });
+    return sharedInstance;
+}
+
 -(id)init {
     self = [super init];
     if (self) {
-        _queue = [[NSOperationQueue alloc] init];
+        _queue = [NSOperationQueue new];
     }
     return self;
 }
@@ -35,17 +52,27 @@
                                        queue:self.queue
                            completionHandler:^(NSURLResponse *responce, NSData * data, NSError *connectionError){
                                if (connectionError) {
-                                   compleationBlock(nil,connectionError);
+                                   dispatch_async(dispatch_get_main_queue(), ^{
+                                       compleationBlock(nil,connectionError);
+                                   });
                                }
                                else {
                                    HTMLDocument * doc = [HTMLDocument HTMLDocumentWithHTMLData:data encoding:nil];
                                    NSMutableArray * employees = [NSMutableArray new];
-                                   NSArray * array = [doc searchWithXPathQuery:@"row"];
-                                   for (HTMLElement*element in array) {
-                                       TABEmplyee * employee = [TABEmplyee employeWithDictionary:element.node];
+                                   NSArray * array = [doc searchWithXPathQuery:TABEmployeeProviderUserDivClassKey];
+                                   for (HTMLElement * element in array) {
+                                       NSString * name = ((HTMLElement *)((HTMLElement *)[element searchWithXPathQuery:TABEmployeeProviderUserNameTagKey][0]).children[0]).content;
+#warning check this doesn't break if the right p is not in the right order!
+                                       NSString * title = ((HTMLElement *)((HTMLElement *)[element searchWithXPathQuery:TABEmployeeProviderUserTitleTagKey][0]).children[0]).content;
+                                       NSString * description = ((HTMLElement *)((HTMLElement *)[element searchWithXPathQuery:TABEmployeeProviderUserDescriptionTagKey][0]).children[0]).content;
+                                       NSString * imageUrl = ((HTMLElement*)[element searchWithXPathQuery:TABEmployeeProviderUserImageTagKey][0]).attributes[TABEmployeeProviderUserImageAttributeKey];
+                                       NSDictionary *employeeDictionary = @{TABEmployeeNameKey: name,TABEmployeeTitleKey: title,TABEmployeeMiniBioKey:description,TABEmployeeImageKey:imageUrl};
+                                       TABEmployee * employee = [TABEmployee employeWithDictionary:employeeDictionary];
                                        employees[employees.count] = employee;
                                    }
-                                   compleationBlock([employees copy],nil);
+                                   dispatch_async(dispatch_get_main_queue(), ^{
+                                       compleationBlock([employees copy],nil);
+                                   });
                                }
                            }];
 }

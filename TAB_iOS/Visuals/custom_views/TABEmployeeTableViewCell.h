@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Zachary BURGESS. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface TABEmployeeTableViewCell : UITableViewCell
 
 @end

@@ -18,19 +18,20 @@
 		9749DC391964020B00C212FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9749DC1E1964020B00C212FD /* Foundation.framework */; };
 		9749DC3A1964020B00C212FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9749DC221964020B00C212FD /* UIKit.framework */; };
 		9749DC421964020B00C212FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9749DC401964020B00C212FD /* InfoPlist.strings */; };
-		9749DC441964020B00C212FD /* TAB_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC431964020B00C212FD /* TAB_iOSTests.m */; };
+		9749DC441964020B00C212FD /* TABEmployeeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC431964020B00C212FD /* TABEmployeeTests.m */; };
 		9749DC6019640E9900C212FD /* HTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC5D19640E9900C212FD /* HTMLDocument.m */; };
 		9749DC6119640E9900C212FD /* HTMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC5F19640E9900C212FD /* HTMLElement.m */; };
 		9749DC6519640EC800C212FD /* HTMLDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC6319640EC800C212FD /* HTMLDocumentTests.m */; };
 		9749DC6619640EC800C212FD /* HTMLElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC6419640EC800C212FD /* HTMLElementTests.m */; };
 		9749DC6819640EE100C212FD /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9749DC6719640EE100C212FD /* libxml2.2.dylib */; };
 		9749DC6A19640F8800C212FD /* doctest.html in Resources */ = {isa = PBXBuildFile; fileRef = 9749DC6919640F8800C212FD /* doctest.html */; };
-		9749DC6E1964116400C212FD /* TABEmplyee.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC6D1964116400C212FD /* TABEmplyee.m */; };
+		9749DC6E1964116400C212FD /* TABEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC6D1964116400C212FD /* TABEmployee.m */; };
 		9749DC711964118400C212FD /* TABEmplyeeDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC701964118400C212FD /* TABEmplyeeDataProvider.m */; };
 		9749DC761964133B00C212FD /* iPhone_storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9749DC751964133B00C212FD /* iPhone_storyboard.storyboard */; };
 		9749DC791964138D00C212FD /* TABEmployeesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC781964138D00C212FD /* TABEmployeesTableViewController.m */; };
 		9749DC7D196413C000C212FD /* TABEmployeeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC7B196413C000C212FD /* TABEmployeeTableViewCell.m */; };
 		9749DC7E196413C000C212FD /* TABEmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9749DC7C196413C000C212FD /* TABEmployeeTableViewCell.xib */; };
+		9749DC811964302E00C212FD /* TABEmployeeDataProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC801964302E00C212FD /* TABEmployeeDataProviderTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +60,7 @@
 		9749DC371964020B00C212FD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9749DC3F1964020B00C212FD /* TAB_iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TAB_iOSTests-Info.plist"; sourceTree = "<group>"; };
 		9749DC411964020B00C212FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9749DC431964020B00C212FD /* TAB_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAB_iOSTests.m; sourceTree = "<group>"; };
+		9749DC431964020B00C212FD /* TABEmployeeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TABEmployeeTests.m; sourceTree = "<group>"; };
 		9749DC5C19640E9900C212FD /* HTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLDocument.h; sourceTree = "<group>"; };
 		9749DC5D19640E9900C212FD /* HTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLDocument.m; sourceTree = "<group>"; };
 		9749DC5E19640E9900C212FD /* HTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLElement.h; sourceTree = "<group>"; };
@@ -68,8 +69,8 @@
 		9749DC6419640EC800C212FD /* HTMLElementTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLElementTests.m; sourceTree = "<group>"; };
 		9749DC6719640EE100C212FD /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		9749DC6919640F8800C212FD /* doctest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = doctest.html; sourceTree = "<group>"; };
-		9749DC6C1964116400C212FD /* TABEmplyee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABEmplyee.h; path = emplyeeData/TABEmplyee.h; sourceTree = "<group>"; };
-		9749DC6D1964116400C212FD /* TABEmplyee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TABEmplyee.m; path = emplyeeData/TABEmplyee.m; sourceTree = "<group>"; };
+		9749DC6C1964116400C212FD /* TABEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABEmployee.h; path = emplyeeData/TABEmployee.h; sourceTree = "<group>"; };
+		9749DC6D1964116400C212FD /* TABEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TABEmployee.m; path = emplyeeData/TABEmployee.m; sourceTree = "<group>"; };
 		9749DC6F1964118400C212FD /* TABEmplyeeDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABEmplyeeDataProvider.h; path = emplyeeData/TABEmplyeeDataProvider.h; sourceTree = "<group>"; };
 		9749DC701964118400C212FD /* TABEmplyeeDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TABEmplyeeDataProvider.m; path = emplyeeData/TABEmplyeeDataProvider.m; sourceTree = "<group>"; };
 		9749DC751964133B00C212FD /* iPhone_storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone_storyboard.storyboard; sourceTree = "<group>"; };
@@ -78,6 +79,8 @@
 		9749DC7A196413C000C212FD /* TABEmployeeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABEmployeeTableViewCell.h; path = Visuals/custom_views/TABEmployeeTableViewCell.h; sourceTree = "<group>"; };
 		9749DC7B196413C000C212FD /* TABEmployeeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TABEmployeeTableViewCell.m; path = Visuals/custom_views/TABEmployeeTableViewCell.m; sourceTree = "<group>"; };
 		9749DC7C196413C000C212FD /* TABEmployeeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TABEmployeeTableViewCell.xib; path = Visuals/custom_views/TABEmployeeTableViewCell.xib; sourceTree = "<group>"; };
+		9749DC801964302E00C212FD /* TABEmployeeDataProviderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TABEmployeeDataProviderTests.m; path = data_tests/TABEmployeeDataProviderTests.m; sourceTree = "<group>"; };
+		9749DC821964328000C212FD /* TABTestConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TABTestConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,9 +167,10 @@
 		9749DC3D1964020B00C212FD /* TAB_iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				9749DC431964020B00C212FD /* TAB_iOSTests.m */,
+				9749DC7F196428ED00C212FD /* Data Tests */,
 				9749DC6219640EC800C212FD /* HTMLDocumentReaderTests */,
 				9749DC3E1964020B00C212FD /* Supporting Files */,
+				9749DC821964328000C212FD /* TABTestConstants.h */,
 			);
 			path = TAB_iOSTests;
 			sourceTree = "<group>";
@@ -204,8 +208,8 @@
 		9749DC6B1964112C00C212FD /* EmployeeData */ = {
 			isa = PBXGroup;
 			children = (
-				9749DC6C1964116400C212FD /* TABEmplyee.h */,
-				9749DC6D1964116400C212FD /* TABEmplyee.m */,
+				9749DC6C1964116400C212FD /* TABEmployee.h */,
+				9749DC6D1964116400C212FD /* TABEmployee.m */,
 				9749DC6F1964118400C212FD /* TABEmplyeeDataProvider.h */,
 				9749DC701964118400C212FD /* TABEmplyeeDataProvider.m */,
 			);
@@ -239,6 +243,15 @@
 				9749DC781964138D00C212FD /* TABEmployeesTableViewController.m */,
 			);
 			name = "view controllers";
+			sourceTree = "<group>";
+		};
+		9749DC7F196428ED00C212FD /* Data Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9749DC431964020B00C212FD /* TABEmployeeTests.m */,
+				9749DC801964302E00C212FD /* TABEmployeeDataProviderTests.m */,
+			);
+			name = "Data Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,7 +361,7 @@
 				9749DC2B1964020B00C212FD /* main.m in Sources */,
 				9749DC791964138D00C212FD /* TABEmployeesTableViewController.m in Sources */,
 				9749DC6019640E9900C212FD /* HTMLDocument.m in Sources */,
-				9749DC6E1964116400C212FD /* TABEmplyee.m in Sources */,
+				9749DC6E1964116400C212FD /* TABEmployee.m in Sources */,
 				9749DC6119640E9900C212FD /* HTMLElement.m in Sources */,
 				9749DC7D196413C000C212FD /* TABEmployeeTableViewCell.m in Sources */,
 			);
@@ -358,7 +371,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9749DC441964020B00C212FD /* TAB_iOSTests.m in Sources */,
+				9749DC811964302E00C212FD /* TABEmployeeDataProviderTests.m in Sources */,
+				9749DC441964020B00C212FD /* TABEmployeeTests.m in Sources */,
 				9749DC6519640EC800C212FD /* HTMLDocumentTests.m in Sources */,
 				9749DC6619640EC800C212FD /* HTMLElementTests.m in Sources */,
 			);
