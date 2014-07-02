@@ -7,19 +7,22 @@
 //
 
 #import "TABEmployeeTableViewCell.h"
+#import "TABEmployee.h"
 
 @implementation TABEmployeeTableViewCell
 
-- (void)awakeFromNib
-{
-    // Initialization code
++ (NSString *)reuseIdentifier {
+    return @"CELL";
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void)setEmployee:(TABEmployee*)paramEmployee {
+    self.name_lbl.text = paramEmployee.name;
+    self.title_lbl.text = paramEmployee.title;
+    self.miniBio_lbl.text = paramEmployee.miniBio;
 }
 
 @end
