@@ -19,6 +19,12 @@
 		9749DC3A1964020B00C212FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9749DC221964020B00C212FD /* UIKit.framework */; };
 		9749DC421964020B00C212FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9749DC401964020B00C212FD /* InfoPlist.strings */; };
 		9749DC441964020B00C212FD /* TAB_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC431964020B00C212FD /* TAB_iOSTests.m */; };
+		9749DC6019640E9900C212FD /* HTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC5D19640E9900C212FD /* HTMLDocument.m */; };
+		9749DC6119640E9900C212FD /* HTMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC5F19640E9900C212FD /* HTMLElement.m */; };
+		9749DC6519640EC800C212FD /* HTMLDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC6319640EC800C212FD /* HTMLDocumentTests.m */; };
+		9749DC6619640EC800C212FD /* HTMLElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC6419640EC800C212FD /* HTMLElementTests.m */; };
+		9749DC6819640EE100C212FD /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9749DC6719640EE100C212FD /* libxml2.2.dylib */; };
+		9749DC6A19640F8800C212FD /* doctest.html in Resources */ = {isa = PBXBuildFile; fileRef = 9749DC6919640F8800C212FD /* doctest.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,14 @@
 		9749DC3F1964020B00C212FD /* TAB_iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TAB_iOSTests-Info.plist"; sourceTree = "<group>"; };
 		9749DC411964020B00C212FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9749DC431964020B00C212FD /* TAB_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAB_iOSTests.m; sourceTree = "<group>"; };
+		9749DC5C19640E9900C212FD /* HTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLDocument.h; sourceTree = "<group>"; };
+		9749DC5D19640E9900C212FD /* HTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLDocument.m; sourceTree = "<group>"; };
+		9749DC5E19640E9900C212FD /* HTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLElement.h; sourceTree = "<group>"; };
+		9749DC5F19640E9900C212FD /* HTMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLElement.m; sourceTree = "<group>"; };
+		9749DC6319640EC800C212FD /* HTMLDocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLDocumentTests.m; sourceTree = "<group>"; };
+		9749DC6419640EC800C212FD /* HTMLElementTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLElementTests.m; sourceTree = "<group>"; };
+		9749DC6719640EE100C212FD /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		9749DC6919640F8800C212FD /* doctest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = doctest.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9749DC6819640EE100C212FD /* libxml2.2.dylib in Frameworks */,
 				9749DC211964020B00C212FD /* CoreGraphics.framework in Frameworks */,
 				9749DC231964020B00C212FD /* UIKit.framework in Frameworks */,
 				9749DC1F1964020B00C212FD /* Foundation.framework in Frameworks */,
@@ -96,6 +111,7 @@
 		9749DC1D1964020B00C212FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9749DC6719640EE100C212FD /* libxml2.2.dylib */,
 				9749DC1E1964020B00C212FD /* Foundation.framework */,
 				9749DC201964020B00C212FD /* CoreGraphics.framework */,
 				9749DC221964020B00C212FD /* UIKit.framework */,
@@ -109,6 +125,7 @@
 			children = (
 				9749DC2D1964020B00C212FD /* TABAppDelegate.h */,
 				9749DC2E1964020B00C212FD /* TABAppDelegate.m */,
+				9749DC5B19640E9900C212FD /* HTMLDocumentReader */,
 				9749DC301964020B00C212FD /* Images.xcassets */,
 				9749DC251964020B00C212FD /* Supporting Files */,
 			);
@@ -130,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				9749DC431964020B00C212FD /* TAB_iOSTests.m */,
+				9749DC6219640EC800C212FD /* HTMLDocumentReaderTests */,
 				9749DC3E1964020B00C212FD /* Supporting Files */,
 			);
 			path = TAB_iOSTests;
@@ -138,10 +156,31 @@
 		9749DC3E1964020B00C212FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9749DC6919640F8800C212FD /* doctest.html */,
 				9749DC3F1964020B00C212FD /* TAB_iOSTests-Info.plist */,
 				9749DC401964020B00C212FD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9749DC5B19640E9900C212FD /* HTMLDocumentReader */ = {
+			isa = PBXGroup;
+			children = (
+				9749DC5C19640E9900C212FD /* HTMLDocument.h */,
+				9749DC5D19640E9900C212FD /* HTMLDocument.m */,
+				9749DC5E19640E9900C212FD /* HTMLElement.h */,
+				9749DC5F19640E9900C212FD /* HTMLElement.m */,
+			);
+			path = HTMLDocumentReader;
+			sourceTree = "<group>";
+		};
+		9749DC6219640EC800C212FD /* HTMLDocumentReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				9749DC6319640EC800C212FD /* HTMLDocumentTests.m */,
+				9749DC6419640EC800C212FD /* HTMLElementTests.m */,
+			);
+			path = HTMLDocumentReaderTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9749DC421964020B00C212FD /* InfoPlist.strings in Resources */,
+				9749DC6A19640F8800C212FD /* doctest.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +282,8 @@
 			files = (
 				9749DC2F1964020B00C212FD /* TABAppDelegate.m in Sources */,
 				9749DC2B1964020B00C212FD /* main.m in Sources */,
+				9749DC6019640E9900C212FD /* HTMLDocument.m in Sources */,
+				9749DC6119640E9900C212FD /* HTMLElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9749DC441964020B00C212FD /* TAB_iOSTests.m in Sources */,
+				9749DC6519640EC800C212FD /* HTMLDocumentTests.m in Sources */,
+				9749DC6619640EC800C212FD /* HTMLElementTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +359,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -347,6 +396,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -438,6 +492,7 @@
 				9749DC491964020B00C212FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9749DC4A1964020B00C212FD /* Build configuration list for PBXNativeTarget "TAB_iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +501,7 @@
 				9749DC4C1964020B00C212FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
