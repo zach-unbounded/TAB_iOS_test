@@ -25,6 +25,12 @@
 		9749DC6619640EC800C212FD /* HTMLElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC6419640EC800C212FD /* HTMLElementTests.m */; };
 		9749DC6819640EE100C212FD /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9749DC6719640EE100C212FD /* libxml2.2.dylib */; };
 		9749DC6A19640F8800C212FD /* doctest.html in Resources */ = {isa = PBXBuildFile; fileRef = 9749DC6919640F8800C212FD /* doctest.html */; };
+		9749DC6E1964116400C212FD /* TABEmplyee.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC6D1964116400C212FD /* TABEmplyee.m */; };
+		9749DC711964118400C212FD /* TABEmplyeeDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC701964118400C212FD /* TABEmplyeeDataProvider.m */; };
+		9749DC761964133B00C212FD /* iPhone_storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9749DC751964133B00C212FD /* iPhone_storyboard.storyboard */; };
+		9749DC791964138D00C212FD /* TABEmployeesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC781964138D00C212FD /* TABEmployeesTableViewController.m */; };
+		9749DC7D196413C000C212FD /* TABEmployeeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9749DC7B196413C000C212FD /* TABEmployeeTableViewCell.m */; };
+		9749DC7E196413C000C212FD /* TABEmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9749DC7C196413C000C212FD /* TABEmployeeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,16 @@
 		9749DC6419640EC800C212FD /* HTMLElementTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLElementTests.m; sourceTree = "<group>"; };
 		9749DC6719640EE100C212FD /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		9749DC6919640F8800C212FD /* doctest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = doctest.html; sourceTree = "<group>"; };
+		9749DC6C1964116400C212FD /* TABEmplyee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABEmplyee.h; path = emplyeeData/TABEmplyee.h; sourceTree = "<group>"; };
+		9749DC6D1964116400C212FD /* TABEmplyee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TABEmplyee.m; path = emplyeeData/TABEmplyee.m; sourceTree = "<group>"; };
+		9749DC6F1964118400C212FD /* TABEmplyeeDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABEmplyeeDataProvider.h; path = emplyeeData/TABEmplyeeDataProvider.h; sourceTree = "<group>"; };
+		9749DC701964118400C212FD /* TABEmplyeeDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TABEmplyeeDataProvider.m; path = emplyeeData/TABEmplyeeDataProvider.m; sourceTree = "<group>"; };
+		9749DC751964133B00C212FD /* iPhone_storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone_storyboard.storyboard; sourceTree = "<group>"; };
+		9749DC771964138D00C212FD /* TABEmployeesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABEmployeesTableViewController.h; path = Visuals/view_controllers/TABEmployeesTableViewController.h; sourceTree = "<group>"; };
+		9749DC781964138D00C212FD /* TABEmployeesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TABEmployeesTableViewController.m; path = Visuals/view_controllers/TABEmployeesTableViewController.m; sourceTree = "<group>"; };
+		9749DC7A196413C000C212FD /* TABEmployeeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABEmployeeTableViewCell.h; path = Visuals/custom_views/TABEmployeeTableViewCell.h; sourceTree = "<group>"; };
+		9749DC7B196413C000C212FD /* TABEmployeeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TABEmployeeTableViewCell.m; path = Visuals/custom_views/TABEmployeeTableViewCell.m; sourceTree = "<group>"; };
+		9749DC7C196413C000C212FD /* TABEmployeeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TABEmployeeTableViewCell.xib; path = Visuals/custom_views/TABEmployeeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +141,8 @@
 			children = (
 				9749DC2D1964020B00C212FD /* TABAppDelegate.h */,
 				9749DC2E1964020B00C212FD /* TABAppDelegate.m */,
+				9749DC72196412DE00C212FD /* Visuals */,
+				9749DC6B1964112C00C212FD /* EmployeeData */,
 				9749DC5B19640E9900C212FD /* HTMLDocumentReader */,
 				9749DC301964020B00C212FD /* Images.xcassets */,
 				9749DC251964020B00C212FD /* Supporting Files */,
@@ -183,6 +201,46 @@
 			path = HTMLDocumentReaderTests;
 			sourceTree = "<group>";
 		};
+		9749DC6B1964112C00C212FD /* EmployeeData */ = {
+			isa = PBXGroup;
+			children = (
+				9749DC6C1964116400C212FD /* TABEmplyee.h */,
+				9749DC6D1964116400C212FD /* TABEmplyee.m */,
+				9749DC6F1964118400C212FD /* TABEmplyeeDataProvider.h */,
+				9749DC701964118400C212FD /* TABEmplyeeDataProvider.m */,
+			);
+			name = EmployeeData;
+			sourceTree = "<group>";
+		};
+		9749DC72196412DE00C212FD /* Visuals */ = {
+			isa = PBXGroup;
+			children = (
+				9749DC74196412F200C212FD /* view controllers */,
+				9749DC73196412E700C212FD /* customViews */,
+				9749DC751964133B00C212FD /* iPhone_storyboard.storyboard */,
+			);
+			name = Visuals;
+			sourceTree = "<group>";
+		};
+		9749DC73196412E700C212FD /* customViews */ = {
+			isa = PBXGroup;
+			children = (
+				9749DC7A196413C000C212FD /* TABEmployeeTableViewCell.h */,
+				9749DC7B196413C000C212FD /* TABEmployeeTableViewCell.m */,
+				9749DC7C196413C000C212FD /* TABEmployeeTableViewCell.xib */,
+			);
+			name = customViews;
+			sourceTree = "<group>";
+		};
+		9749DC74196412F200C212FD /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9749DC771964138D00C212FD /* TABEmployeesTableViewController.h */,
+				9749DC781964138D00C212FD /* TABEmployeesTableViewController.m */,
+			);
+			name = "view controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,6 +289,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Zachary BURGESS";
 				TargetAttributes = {
+					9749DC1A1964020B00C212FD = {
+						DevelopmentTeam = Q899T2QRE9;
+					};
 					9749DC351964020B00C212FD = {
 						TestTargetID = 9749DC1A1964020B00C212FD;
 					};
@@ -259,8 +320,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9749DC761964133B00C212FD /* iPhone_storyboard.storyboard in Resources */,
 				9749DC291964020B00C212FD /* InfoPlist.strings in Resources */,
 				9749DC311964020B00C212FD /* Images.xcassets in Resources */,
+				9749DC7E196413C000C212FD /* TABEmployeeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,10 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9749DC711964118400C212FD /* TABEmplyeeDataProvider.m in Sources */,
 				9749DC2F1964020B00C212FD /* TABAppDelegate.m in Sources */,
 				9749DC2B1964020B00C212FD /* main.m in Sources */,
+				9749DC791964138D00C212FD /* TABEmployeesTableViewController.m in Sources */,
 				9749DC6019640E9900C212FD /* HTMLDocument.m in Sources */,
+				9749DC6E1964116400C212FD /* TABEmplyee.m in Sources */,
 				9749DC6119640E9900C212FD /* HTMLElement.m in Sources */,
+				9749DC7D196413C000C212FD /* TABEmployeeTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TAB_iOS/TAB_iOS-Prefix.pch";
 				INFOPLIST_FILE = "TAB_iOS/TAB_iOS-Info.plist";
@@ -425,6 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TAB_iOS/TAB_iOS-Prefix.pch";
 				INFOPLIST_FILE = "TAB_iOS/TAB_iOS-Info.plist";
